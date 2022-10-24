@@ -1,0 +1,72 @@
+.offers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+    margin-bottom: 96px;
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+    }
+
+    .offer-card {
+        background: rgba(33, 22, 22);
+        position: relative;
+
+        .offer-title {
+            position: relative;
+            height: 100%;
+            /* нужен, чтобы display: flex; работал корректно, 
+            а именно, чтобы justify-content: center; 
+            работал на всю длину блока offer-title */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #fff;
+
+            .offer-title-bottom {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29px;
+                color: $site-color;
+            }
+        }
+
+        &:last-child {
+            grid-column: 1/4;
+        }
+
+        @media (max-width: 530px) {
+            height: 248px;
+
+            &:last-child {
+                height: 111px;
+            }
+        }
+    }
+
+    @media (max-width: 1165px) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: 768.5px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 168px 116px;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    @media (max-width: 530px) {
+        // padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}

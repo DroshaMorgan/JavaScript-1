@@ -1,0 +1,105 @@
+.header {
+    height: 75px;
+    background: #222222;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+
+        .left-icon {
+            .logo-icon {
+                margin-right: 38px;
+            }
+
+            @media (max-width: 768.5px) {
+                padding: 2px 15px;
+            }
+        }
+
+        .right-icon {
+            padding: 10px 10px;
+            position: relative;
+
+            .user-icon {
+                margin-left: 29px;
+
+                @media (max-width: 375.5px) {
+                    display: none;
+                }
+            }
+
+            .cart-icon-div {
+                display: inline;
+                position: relative;
+
+                .cart-icon {
+                    margin-left: 29px;
+                }
+
+                .circle {
+                    position: absolute;
+                    right: -8px;
+                    top: -20px;
+                    color: #fff;
+                    width: 19px;
+                    background: $site-color;
+                    border-radius: 50%;
+                    text-align: center;
+                }
+
+                @media (max-width: 375.5px) {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 768.5px) {
+                padding: 10px 28px;
+            }
+        }
+
+
+        .cart-popup-block {
+            min-height: 200px;
+            width: 450px;
+            background-color: #fff;
+            position: absolute;
+            top: 59px;
+            right: 0;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            padding: 15px;
+            box-sizing: border-box;
+            z-index: 1;
+
+            &__title {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                font-weight: 900;
+                margin-bottom: 10px;
+            }
+
+            &__products {
+                min-height: 100px;
+                margin-bottom: 10px;
+            }
+
+            &__price {
+                font-weight: 900;
+                min-height: 30px;
+            }
+
+        }
+
+        .renderProduct {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            &El {
+                margin-right: 10px;
+            }
+        }
+    }
+}

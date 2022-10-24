@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+.site-color-span {
+    color: $site-color;
+}
+
+body {
+    font-family: Lato;
+    color: #222222;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+
+    @media (max-width: 768.5px) {
+        max-width: 735px;
+    }
+}
+
+.pointer-svg-color:hover {
+    cursor: pointer;
+
+    path:first-child {
+        fill: $site-color;
+    }
+
+}
+
+.pointer-svg-icon-color:hover {
+    cursor: pointer;
+
+    .path-site-color {
+        fill: $site-color;
+    }
+
+    .path-white-color {
+        fill: #fff;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+// .pointer-button-color:hover {
+//     cursor: pointer;
+//     background: $site-color;
+//     color: #fff;
+// }

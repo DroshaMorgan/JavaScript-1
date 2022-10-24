@@ -1,0 +1,184 @@
+.subscribe {
+    position: relative;
+    height: 448px;
+
+    .subscribe-bcg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .subscribe-container {
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .quote-block {
+            height: 225px;
+            width: 360px;
+            text-align: center;
+
+            img {
+                margin-bottom: 30px;
+            }
+
+            .quote {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+
+        .subscribe-block {
+            height: 142px;
+            width: 400px;
+            text-align: center;
+
+            .subscribe-text-top {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 38px;
+                margin-bottom: 10px;
+            }
+
+            .subscribe-text-bottom {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 30px;
+                margin-bottom: 25px;
+            }
+
+            .subscribe-form {
+                width: 100%;
+                height: 50px;
+
+                .subscribe-input {
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 260px;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    border: none;
+                    background: #E1E1E1;
+                    padding-left: 15px;
+                    margin-right: -3px;
+
+                    &::placeholder {
+                        color: transparentize($dark-bcg, 0.33);
+                    }
+                }
+
+                .subscribe-button {
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 100px;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    border: none;
+                    background: $site-color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media (max-width:768.5px) {
+        height: 614px;
+
+        .subscribe-container {
+            flex-direction: column;
+            justify-content: center;
+
+            .quote-block {
+                margin-bottom: 60px;
+
+                img {
+                    margin-bottom: 30px;
+                }
+
+                .quote {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:460px) {
+        .subscribe-container {
+            .subscribe-block {
+                width: 340px;
+
+                .subscribe-form {
+                    .subscribe-input {
+                        width: 240px;
+                    }
+
+                    .subscribe-button {
+                        width: 95px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:375.5px) {
+        height: 550px;
+
+        .subscribe-container {
+            .quote-block {
+                .quote {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+
+            .subscribe-block {
+                width: 360px;
+            }
+        }
+    }
+
+    @media (max-width:360.5px) {
+        .subscribe-container {
+            .quote-block {
+                width: 300px;
+
+                .quote {
+
+                    font-size: 14px;
+
+                }
+            }
+
+            .subscribe-block {
+                width: 300px;
+
+                .subscribe-text-top {
+                    font-size: 20px;
+                }
+
+                .subscribe-text-bottom {
+                    font-size: 14px;
+                }
+
+                .subscribe-form {
+                    .subscribe-input {
+                        width: 180px;
+                    }
+
+                    .subscribe-button {
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
